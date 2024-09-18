@@ -1,0 +1,72 @@
+<!-- کلیک روی هر اموجی باعث پخش صدای خاص اموجی بشه -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 Emojis</title>
+
+    <style>
+        * {
+            transition: all .8s ease-in-out;
+        }
+        body { 
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 500%;
+        }
+        p{
+            font-size: 30%;
+            font-weight: 900;
+            opacity: 0;
+            
+        }
+        .angry {
+            background-color: #ff6f6f;
+        }
+        .happy {
+            background-color: #ffeb3b;
+        }
+        .alien {
+            background-color: #4caf50;
+        }
+
+        div:hover p {
+            opacity: 1;
+            margin-top: 50px;
+        } 
+        .angry:hover span {
+            transform: rotateX(360deg);
+        }
+        .happy:hover span {
+            transform: rotateZ(360deg);
+        }
+        .alien:hover span {
+            transform: rotateY(360deg);
+        }        
+    </style>
+</head>
+<body>
+    <div class="angry">
+        <span>😡</span>
+        <p style="color: #340000;">GoAway</p>
+    </div>
+    <div class="happy">
+        <span>😁</span>
+        <p style="color: #412a01;">HHHH</p>
+    </div>
+    <div class="alien">
+        <span>👽</span>
+        <p style="color: #013034;">WoW!</p>
+    </div>
+</body>
+</html>
